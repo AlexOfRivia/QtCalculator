@@ -11,6 +11,11 @@ numerical buttons: 505050
 Clear, Percent and change sign buttons: D4D4D2
 */
 
+/*The numbers should at first be used as strings and then converted into float numbers I think
+
+you can press coma only once per number
+*/
+
 
 class kalkulator : public QMainWindow
 {
