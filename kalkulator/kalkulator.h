@@ -22,5 +22,7 @@ public:
 
 private:
     Ui::kalkulatorClass ui;
+
+    //Functions will go here
 };
 
