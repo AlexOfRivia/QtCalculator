@@ -58,7 +58,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
     <item>
      <layout class="QGridLayout" name="gridLayout">
       <item row="2" column="1">
-       <widget class="QPushButton" name="pushButton_8">
+       <widget class="QPushButton" name="fiveButton">
         <property name="minimumSize">
          <size>
           <width>100</width>
@@ -83,7 +83,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
        </widget>
       </item>
       <item row="2" column="2">
-       <widget class="QPushButton" name="pushButton_13">
+       <widget class="QPushButton" name="sixButton">
         <property name="minimumSize">
          <size>
           <width>100</width>
@@ -108,7 +108,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
        </widget>
       </item>
       <item row="0" column="0">
-       <widget class="QPushButton" name="pushButton_2">
+       <widget class="QPushButton" name="backButton">
         <property name="minimumSize">
          <size>
           <width>100</width>
@@ -133,7 +133,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
        </widget>
       </item>
       <item row="3" column="1">
-       <widget class="QPushButton" name="pushButton_9">
+       <widget class="QPushButton" name="twoButton">
         <property name="minimumSize">
          <size>
           <width>100</width>
@@ -158,7 +158,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
        </widget>
       </item>
       <item row="4" column="1">
-       <widget class="QPushButton" name="pushButton_10">
+       <widget class="QPushButton" name="zeroButton">
         <property name="minimumSize">
          <size>
           <width>100</width>
@@ -183,7 +183,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
        </widget>
       </item>
       <item row="4" column="0">
-       <widget class="QPushButton" name="pushButton_5">
+       <widget class="QPushButton" name="powerButton">
         <property name="minimumSize">
          <size>
           <width>100</width>
@@ -208,7 +208,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
        </widget>
       </item>
       <item row="1" column="1">
-       <widget class="QPushButton" name="pushButton_7">
+       <widget class="QPushButton" name="eightButton">
         <property name="minimumSize">
          <size>
           <width>100</width>
@@ -233,7 +233,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
        </widget>
       </item>
       <item row="3" column="2">
-       <widget class="QPushButton" name="pushButton_14">
+       <widget class="QPushButton" name="threeButton">
         <property name="minimumSize">
          <size>
           <width>100</width>
@@ -258,7 +258,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
        </widget>
       </item>
       <item row="1" column="2">
-       <widget class="QPushButton" name="pushButton_12">
+       <widget class="QPushButton" name="nineButton">
         <property name="minimumSize">
          <size>
           <width>100</width>
@@ -283,7 +283,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
        </widget>
       </item>
       <item row="1" column="0">
-       <widget class="QPushButton" name="pushButton_3">
+       <widget class="QPushButton" name="sevenButton">
         <property name="minimumSize">
          <size>
           <width>100</width>
@@ -308,7 +308,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
        </widget>
       </item>
       <item row="3" column="0">
-       <widget class="QPushButton" name="pushButton_4">
+       <widget class="QPushButton" name="oneButton">
         <property name="minimumSize">
          <size>
           <width>100</width>
@@ -333,7 +333,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
        </widget>
       </item>
       <item row="0" column="1">
-       <widget class="QPushButton" name="pushButton_6">
+       <widget class="QPushButton" name="clearButton">
         <property name="minimumSize">
          <size>
           <width>100</width>
@@ -358,7 +358,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
        </widget>
       </item>
       <item row="2" column="0">
-       <widget class="QPushButton" name="pushButton">
+       <widget class="QPushButton" name="fourButton">
         <property name="minimumSize">
          <size>
           <width>100</width>
@@ -383,7 +383,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
        </widget>
       </item>
       <item row="0" column="2">
-       <widget class="QPushButton" name="pushButton_11">
+       <widget class="QPushButton" name="squareRoot">
         <property name="minimumSize">
          <size>
           <width>100</width>
@@ -408,7 +408,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
        </widget>
       </item>
       <item row="4" column="2">
-       <widget class="QPushButton" name="pushButton_15">
+       <widget class="QPushButton" name="dotButton">
         <property name="minimumSize">
          <size>
           <width>100</width>
@@ -433,7 +433,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
        </widget>
       </item>
       <item row="0" column="3">
-       <widget class="QPushButton" name="pushButton_16">
+       <widget class="QPushButton" name="divideButton">
         <property name="minimumSize">
          <size>
           <width>100</width>
@@ -457,7 +457,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
        </widget>
       </item>
       <item row="1" column="3">
-       <widget class="QPushButton" name="pushButton_17">
+       <widget class="QPushButton" name="multiplyButton">
         <property name="minimumSize">
          <size>
           <width>100</width>
@@ -481,7 +481,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
        </widget>
       </item>
       <item row="2" column="3">
-       <widget class="QPushButton" name="pushButton_18">
+       <widget class="QPushButton" name="substractButton">
         <property name="minimumSize">
          <size>
           <width>100</width>
@@ -505,7 +505,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
        </widget>
       </item>
       <item row="3" column="3">
-       <widget class="QPushButton" name="pushButton_19">
+       <widget class="QPushButton" name="addButton">
         <property name="minimumSize">
          <size>
           <width>100</width>
@@ -529,7 +529,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
        </widget>
       </item>
       <item row="4" column="3">
-       <widget class="QPushButton" name="pushButton_20">
+       <widget class="QPushButton" name="equalsButton">
         <property name="minimumSize">
          <size>
           <width>100</width>
