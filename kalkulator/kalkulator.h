@@ -2,6 +2,7 @@
 
 #include <QtWidgets/QMainWindow>
 #include "ui_kalkulator.h"
+#include <vector>
 
 
 /*Colour pallete:
@@ -29,5 +30,29 @@ private:
     Ui::kalkulatorClass ui;
 
     //Functions will go here
+
+    //Variables
+    QString calcString;
+    std::vector<char> operators;
+    bool isSecondOperation = false; //For checking if any of the operation button has been pressed
+
+    //Number functions
+    void oneButtonPressed();
+    void twoButtonPressed();
+    void threeButtonPressed();
+    void fourButtonPressed();
+    void fiveButtonPressed();
+    void sixButtonPressed();
+    void sevenButtonPressed();
+    void eightButtonPressed();
+    void nineButtonPressed();
+    void zeroButtonPressed();
+
+    //Basic operations 
+    void addButtonPressed();
+    void substractButtonPressed();
+    void divideButtonPressed();
+    void multiplyButtonPressed();
+
 };
 

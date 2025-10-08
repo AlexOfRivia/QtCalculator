@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>420</width>
-    <height>630</height>
+    <width>443</width>
+    <height>627</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -43,6 +43,9 @@
 	background: white
 }</string>
       </property>
+      <property name="readOnly">
+       <bool>true</bool>
+      </property>
       <property name="html">
        <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;meta charset=&quot;utf-8&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
@@ -57,131 +60,6 @@ li.checked::marker { content: &quot;\2612&quot;; }
     </item>
     <item>
      <layout class="QGridLayout" name="gridLayout">
-      <item row="2" column="1">
-       <widget class="QPushButton" name="fiveButton">
-        <property name="minimumSize">
-         <size>
-          <width>100</width>
-          <height>80</height>
-         </size>
-        </property>
-        <property name="font">
-         <font>
-          <pointsize>16</pointsize>
-         </font>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">QPushButton
-{
-	background: rgb(80,80,80)
-}
-</string>
-        </property>
-        <property name="text">
-         <string>5</string>
-        </property>
-       </widget>
-      </item>
-      <item row="2" column="2">
-       <widget class="QPushButton" name="sixButton">
-        <property name="minimumSize">
-         <size>
-          <width>100</width>
-          <height>80</height>
-         </size>
-        </property>
-        <property name="font">
-         <font>
-          <pointsize>16</pointsize>
-         </font>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">QPushButton
-{
-	background: rgb(80,80,80)
-}
-</string>
-        </property>
-        <property name="text">
-         <string>6</string>
-        </property>
-       </widget>
-      </item>
-      <item row="0" column="0">
-       <widget class="QPushButton" name="backButton">
-        <property name="minimumSize">
-         <size>
-          <width>100</width>
-          <height>80</height>
-         </size>
-        </property>
-        <property name="font">
-         <font>
-          <pointsize>14</pointsize>
-         </font>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">QPushButton
-{
-	background: rgb(212,212,210)
-}
-</string>
-        </property>
-        <property name="text">
-         <string>Back</string>
-        </property>
-       </widget>
-      </item>
-      <item row="3" column="1">
-       <widget class="QPushButton" name="twoButton">
-        <property name="minimumSize">
-         <size>
-          <width>100</width>
-          <height>80</height>
-         </size>
-        </property>
-        <property name="font">
-         <font>
-          <pointsize>16</pointsize>
-         </font>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">QPushButton
-{
-	background: rgb(80,80,80)
-}
-</string>
-        </property>
-        <property name="text">
-         <string>2</string>
-        </property>
-       </widget>
-      </item>
-      <item row="4" column="1">
-       <widget class="QPushButton" name="zeroButton">
-        <property name="minimumSize">
-         <size>
-          <width>100</width>
-          <height>80</height>
-         </size>
-        </property>
-        <property name="font">
-         <font>
-          <pointsize>16</pointsize>
-         </font>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">QPushButton
-{
-	background: rgb(80,80,80)
-}
-</string>
-        </property>
-        <property name="text">
-         <string>0</string>
-        </property>
-       </widget>
-      </item>
       <item row="4" column="0">
        <widget class="QPushButton" name="powerButton">
         <property name="minimumSize">
@@ -204,131 +82,6 @@ li.checked::marker { content: &quot;\2612&quot;; }
         </property>
         <property name="text">
          <string>pow2</string>
-        </property>
-       </widget>
-      </item>
-      <item row="1" column="1">
-       <widget class="QPushButton" name="eightButton">
-        <property name="minimumSize">
-         <size>
-          <width>100</width>
-          <height>80</height>
-         </size>
-        </property>
-        <property name="font">
-         <font>
-          <pointsize>16</pointsize>
-         </font>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">QPushButton
-{
-	background: rgb(80,80,80)
-}
-</string>
-        </property>
-        <property name="text">
-         <string>8</string>
-        </property>
-       </widget>
-      </item>
-      <item row="3" column="2">
-       <widget class="QPushButton" name="threeButton">
-        <property name="minimumSize">
-         <size>
-          <width>100</width>
-          <height>80</height>
-         </size>
-        </property>
-        <property name="font">
-         <font>
-          <pointsize>16</pointsize>
-         </font>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">QPushButton
-{
-	background: rgb(80,80,80)
-}
-</string>
-        </property>
-        <property name="text">
-         <string>3</string>
-        </property>
-       </widget>
-      </item>
-      <item row="1" column="2">
-       <widget class="QPushButton" name="nineButton">
-        <property name="minimumSize">
-         <size>
-          <width>100</width>
-          <height>80</height>
-         </size>
-        </property>
-        <property name="font">
-         <font>
-          <pointsize>16</pointsize>
-         </font>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">QPushButton
-{
-	background: rgb(80,80,80)
-}
-</string>
-        </property>
-        <property name="text">
-         <string>9</string>
-        </property>
-       </widget>
-      </item>
-      <item row="1" column="0">
-       <widget class="QPushButton" name="sevenButton">
-        <property name="minimumSize">
-         <size>
-          <width>100</width>
-          <height>80</height>
-         </size>
-        </property>
-        <property name="font">
-         <font>
-          <pointsize>16</pointsize>
-         </font>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">QPushButton
-{
-	background: rgb(80,80,80)
-}
-</string>
-        </property>
-        <property name="text">
-         <string>7</string>
-        </property>
-       </widget>
-      </item>
-      <item row="3" column="0">
-       <widget class="QPushButton" name="oneButton">
-        <property name="minimumSize">
-         <size>
-          <width>100</width>
-          <height>80</height>
-         </size>
-        </property>
-        <property name="font">
-         <font>
-          <pointsize>16</pointsize>
-         </font>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">QPushButton
-{
-	background: rgb(80,80,80)
-}
-</string>
-        </property>
-        <property name="text">
-         <string>1</string>
         </property>
        </widget>
       </item>
@@ -357,8 +110,8 @@ li.checked::marker { content: &quot;\2612&quot;; }
         </property>
        </widget>
       </item>
-      <item row="2" column="0">
-       <widget class="QPushButton" name="fourButton">
+      <item row="2" column="1">
+       <widget class="QPushButton" name="fiveButton">
         <property name="minimumSize">
          <size>
           <width>100</width>
@@ -378,7 +131,131 @@ li.checked::marker { content: &quot;\2612&quot;; }
 </string>
         </property>
         <property name="text">
-         <string>4</string>
+         <string>5</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="0">
+       <widget class="QPushButton" name="backButton">
+        <property name="minimumSize">
+         <size>
+          <width>100</width>
+          <height>80</height>
+         </size>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>14</pointsize>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton
+{
+	background: rgb(212,212,210)
+}
+</string>
+        </property>
+        <property name="text">
+         <string>Back</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="3">
+       <widget class="QPushButton" name="substractButton">
+        <property name="minimumSize">
+         <size>
+          <width>100</width>
+          <height>80</height>
+         </size>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>18</pointsize>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton
+{
+	background: rgb(255,149,0)
+}</string>
+        </property>
+        <property name="text">
+         <string>-</string>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="1">
+       <widget class="QPushButton" name="zeroButton">
+        <property name="minimumSize">
+         <size>
+          <width>100</width>
+          <height>80</height>
+         </size>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>16</pointsize>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton
+{
+	background: rgb(80,80,80)
+}
+</string>
+        </property>
+        <property name="text">
+         <string>0</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="1">
+       <widget class="QPushButton" name="twoButton">
+        <property name="minimumSize">
+         <size>
+          <width>100</width>
+          <height>80</height>
+         </size>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>16</pointsize>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton
+{
+	background: rgb(80,80,80)
+}
+</string>
+        </property>
+        <property name="text">
+         <string>2</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="2">
+       <widget class="QPushButton" name="threeButton">
+        <property name="minimumSize">
+         <size>
+          <width>100</width>
+          <height>80</height>
+         </size>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>16</pointsize>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton
+{
+	background: rgb(80,80,80)
+}
+</string>
+        </property>
+        <property name="text">
+         <string>3</string>
         </property>
        </widget>
       </item>
@@ -404,6 +281,55 @@ li.checked::marker { content: &quot;\2612&quot;; }
         </property>
         <property name="text">
          <string>sqRoot</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="3">
+       <widget class="QPushButton" name="addButton">
+        <property name="minimumSize">
+         <size>
+          <width>100</width>
+          <height>80</height>
+         </size>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>14</pointsize>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton
+{
+	background: rgb(255,149,0)
+}</string>
+        </property>
+        <property name="text">
+         <string>+</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="2">
+       <widget class="QPushButton" name="sixButton">
+        <property name="minimumSize">
+         <size>
+          <width>100</width>
+          <height>80</height>
+         </size>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>16</pointsize>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton
+{
+	background: rgb(80,80,80)
+}
+</string>
+        </property>
+        <property name="text">
+         <string>6</string>
         </property>
        </widget>
       </item>
@@ -456,6 +382,56 @@ li.checked::marker { content: &quot;\2612&quot;; }
         </property>
        </widget>
       </item>
+      <item row="3" column="0">
+       <widget class="QPushButton" name="oneButton">
+        <property name="minimumSize">
+         <size>
+          <width>100</width>
+          <height>80</height>
+         </size>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>16</pointsize>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton
+{
+	background: rgb(80,80,80)
+}
+</string>
+        </property>
+        <property name="text">
+         <string>1</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1">
+       <widget class="QPushButton" name="eightButton">
+        <property name="minimumSize">
+         <size>
+          <width>100</width>
+          <height>80</height>
+         </size>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>16</pointsize>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton
+{
+	background: rgb(80,80,80)
+}
+</string>
+        </property>
+        <property name="text">
+         <string>8</string>
+        </property>
+       </widget>
+      </item>
       <item row="1" column="3">
        <widget class="QPushButton" name="multiplyButton">
         <property name="minimumSize">
@@ -480,8 +456,8 @@ li.checked::marker { content: &quot;\2612&quot;; }
         </property>
        </widget>
       </item>
-      <item row="2" column="3">
-       <widget class="QPushButton" name="substractButton">
+      <item row="2" column="0">
+       <widget class="QPushButton" name="fourButton">
         <property name="minimumSize">
          <size>
           <width>100</width>
@@ -490,41 +466,18 @@ li.checked::marker { content: &quot;\2612&quot;; }
         </property>
         <property name="font">
          <font>
-          <pointsize>18</pointsize>
+          <pointsize>16</pointsize>
          </font>
         </property>
         <property name="styleSheet">
          <string notr="true">QPushButton
 {
-	background: rgb(255,149,0)
-}</string>
+	background: rgb(80,80,80)
+}
+</string>
         </property>
         <property name="text">
-         <string>-</string>
-        </property>
-       </widget>
-      </item>
-      <item row="3" column="3">
-       <widget class="QPushButton" name="addButton">
-        <property name="minimumSize">
-         <size>
-          <width>100</width>
-          <height>80</height>
-         </size>
-        </property>
-        <property name="font">
-         <font>
-          <pointsize>14</pointsize>
-         </font>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">QPushButton
-{
-	background: rgb(255,149,0)
-}</string>
-        </property>
-        <property name="text">
-         <string>+</string>
+         <string>4</string>
         </property>
        </widget>
       </item>
@@ -549,6 +502,56 @@ li.checked::marker { content: &quot;\2612&quot;; }
         </property>
         <property name="text">
          <string>=</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="2">
+       <widget class="QPushButton" name="nineButton">
+        <property name="minimumSize">
+         <size>
+          <width>100</width>
+          <height>80</height>
+         </size>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>16</pointsize>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton
+{
+	background: rgb(80,80,80)
+}
+</string>
+        </property>
+        <property name="text">
+         <string>9</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QPushButton" name="sevenButton">
+        <property name="minimumSize">
+         <size>
+          <width>100</width>
+          <height>80</height>
+         </size>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>16</pointsize>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton
+{
+	background: rgb(80,80,80)
+}
+</string>
+        </property>
+        <property name="text">
+         <string>7</string>
         </property>
        </widget>
       </item>
