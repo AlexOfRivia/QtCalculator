@@ -56,7 +56,6 @@ private:
     void multiplyButtonPressed();
 
     //Other operations
-    void clearErrors();
     void powerButtonPressed();
     void sqRootButtonPressed();
     void clearButtonPressed();
@@ -65,6 +64,7 @@ private:
 
     //Other functions I guess
     bool isOperator(); //Checking if a character is an operator or not
+    void clearErrors();
 
 };
 

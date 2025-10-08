@@ -1,78 +1,91 @@
 #include "kalkulator.h"
 
+// ! NUMBERS !
+
 void kalkulator::oneButtonPressed()
 {
     this->calcString += "1";
     ui.resultPanel->setText(this->calcString);
-    this->isSecondOperation = false;
+    //this->isSecondOperation = false;
 }
 
 void kalkulator::twoButtonPressed()
 {
     this->calcString += "2";
     ui.resultPanel->setText(this->calcString);
-    this->isSecondOperation = false;
+    //this->isSecondOperation = false;
 }
 
 void kalkulator::threeButtonPressed()
 {
     this->calcString += "3";
     ui.resultPanel->setText(this->calcString);
-    this->isSecondOperation = false;
+    //this->isSecondOperation = false;
 }
 
 void kalkulator::fourButtonPressed()
 {
     this->calcString += "4";
     ui.resultPanel->setText(this->calcString);
-    this->isSecondOperation = false;
+    //this->isSecondOperation = false;
 }
 
 void kalkulator::fiveButtonPressed()
 {
     this->calcString += "5";
     ui.resultPanel->setText(this->calcString);
-    this->isSecondOperation = false;
+    //this->isSecondOperation = false;
 }
 
 void kalkulator::sixButtonPressed()
 {
     this->calcString += "6";
     ui.resultPanel->setText(this->calcString);
-    this->isSecondOperation = false;
+    //this->isSecondOperation = false;
 }
 
 void kalkulator::sevenButtonPressed()
 {
     this->calcString += "7";
     ui.resultPanel->setText(this->calcString);
-    this->isSecondOperation = false;
+    //this->isSecondOperation = false;
 }
 
 void kalkulator::eightButtonPressed()
 {
     this->calcString += "8";
     ui.resultPanel->setText(this->calcString);
-    this->isSecondOperation = false;
+    //this->isSecondOperation = false;
 }
 
 void kalkulator::nineButtonPressed()
 {
     this->calcString += "9";
     ui.resultPanel->setText(this->calcString);
-    this->isSecondOperation = false;
+    //this->isSecondOperation = false;
 }
 
 void kalkulator::zeroButtonPressed()
 {
     this->calcString += "0";
     ui.resultPanel->setText(this->calcString);
-    this->isSecondOperation = false;
+    //this->isSecondOperation = false;
 }
+
+
+// ! BASIC OPERATIONS !
 
 void kalkulator::addButtonPressed()
 {
-
+    if (!calcString.isEmpty())
+    {
+        if (!isSecondOperation)
+        {
+            this->calcString += " + ";
+            ui.resultPanel->setText(this->calcString);
+            this->isSecondOperation = true;
+        }    
+    }
 }
 
 void kalkulator::substractButtonPressed()
@@ -90,11 +103,7 @@ void kalkulator::multiplyButtonPressed()
 
 }
 
-//Clearing potential calculation errors (for example dividing by 0)
-void kalkulator::clearErrors()
-{
-
-}
+// ! OTHER OPERATIONS !
 
 void kalkulator::powerButtonPressed()
 {
@@ -116,8 +125,22 @@ void kalkulator::decimalButtonPressed()
 
 }
 
+// ! OTHER FUNCTIONS !
+
 //Deleting last inputed number
 void kalkulator::backButtonPressed()
+{
+
+}
+
+//Checking wether the character is an operator
+bool kalkulator::isOperator()
+{
+    return false;
+}
+
+//Clearing potential calculation errors (for example dividing by 0)
+void kalkulator::clearErrors()
 {
 
 }
@@ -168,6 +191,10 @@ kalkulator::kalkulator(QWidget *parent)
 
     QObject::connect(
         ui.zeroButton, &QPushButton::clicked, this, &kalkulator::zeroButtonPressed
+    );
+
+    QObject::connect(
+        ui.addButton, &QPushButton::clicked, this, &kalkulator::addButtonPressed
     );
 
 }
