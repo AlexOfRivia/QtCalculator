@@ -1,9 +1,5 @@
 #include "kalkulator.h"
 
-
-//Functions will go here I guess xd
-
-
 void kalkulator::oneButtonPressed()
 {
     this->calcString += "1";
@@ -90,6 +86,38 @@ void kalkulator::divideButtonPressed()
 }
 
 void kalkulator::multiplyButtonPressed()
+{
+
+}
+
+//Clearing potential calculation errors (for example dividing by 0)
+void kalkulator::clearErrors()
+{
+
+}
+
+void kalkulator::powerButtonPressed()
+{
+
+}
+
+void kalkulator::sqRootButtonPressed()
+{
+
+}
+
+void kalkulator::clearButtonPressed()
+{
+
+}
+
+void kalkulator::decimalButtonPressed()
+{
+
+}
+
+//Deleting last inputed number
+void kalkulator::backButtonPressed()
 {
 
 }

@@ -15,6 +15,8 @@ Clear, Percent and change sign buttons: D4D4D2
 /*The numbers should at first be used as strings and then converted into float numbers I think
 
 you can press coma only once per number
+
+Also add a function that clears all errors uppon button press, bozo
 */
 
 
@@ -29,8 +31,7 @@ public:
 private:
     Ui::kalkulatorClass ui;
 
-    //Functions will go here
-
+    
     //Variables
     QString calcString;
     std::vector<char> operators;
@@ -53,6 +54,17 @@ private:
     void substractButtonPressed();
     void divideButtonPressed();
     void multiplyButtonPressed();
+
+    //Other operations
+    void clearErrors();
+    void powerButtonPressed();
+    void sqRootButtonPressed();
+    void clearButtonPressed();
+    void decimalButtonPressed();
+    void backButtonPressed();
+
+    //Other functions I guess
+    bool isOperator(); //Checking if a character is an operator or not
 
 };
 
