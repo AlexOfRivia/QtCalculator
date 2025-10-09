@@ -90,7 +90,19 @@ void kalkulator::addButtonPressed()
 
 void kalkulator::substractButtonPressed()
 {
-
+    if (!isSecondOperation)
+    {
+        if (calcString.isEmpty())
+        {
+            this->calcString += "-";
+            ui.resultPanel->setText(this->calcString);
+            return;
+        } else {
+            this->calcString += " - ";
+            ui.resultPanel->setText(this->calcString);
+            isSecondOperation = true;
+        }
+    }
 }
 
 void kalkulator::divideButtonPressed()
@@ -197,6 +209,25 @@ kalkulator::kalkulator(QWidget *parent)
         ui.addButton, &QPushButton::clicked, this, &kalkulator::addButtonPressed
     );
 
+    QObject::connect(
+        ui.addButton, &QPushButton::clicked, this, &kalkulator::addButtonPressed
+    );
+
+    QObject::connect(
+        ui.substractButton, &QPushButton::clicked, this, &kalkulator::substractButtonPressed
+    );
+
+    QObject::connect(
+        ui.multiplyButton, &QPushButton::clicked, this, &kalkulator::addButtonPressed
+    );
+
+    QObject::connect(
+        ui.divideButton, &QPushButton::clicked, this, &kalkulator::divideButtonPressed
+    );
+
+    QObject::connect(
+        ui.dotButton, &QPushButton::clicked, this, &kalkulator::decimalButtonPressed
+    );
 }
 
 //Destructor
