@@ -107,12 +107,22 @@ void kalkulator::substractButtonPressed()
 
 void kalkulator::divideButtonPressed()
 {
-
+    if (!isSecondOperation)
+    {
+        this->calcString += " : ";
+        ui.resultPanel->setText(this->calcString);
+        this->isSecondOperation = true;
+    }
 }
 
 void kalkulator::multiplyButtonPressed()
 {
-
+    if (!isSecondOperation)
+    {
+        this->calcString += " X ";
+        ui.resultPanel->setText(this->calcString);
+        this->isSecondOperation = true;
+    }
 }
 
 // ! OTHER OPERATIONS !

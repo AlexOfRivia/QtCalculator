@@ -81,7 +81,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
 </string>
         </property>
         <property name="text">
-         <string>pow2</string>
+         <string>pow</string>
         </property>
        </widget>
       </item>
