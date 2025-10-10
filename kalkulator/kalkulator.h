@@ -35,7 +35,7 @@ private:
     //Variables
     QString calcString;
     std::vector<char> operators;
-    bool isSecondOperation = false; //For checking if any of the operation button has been pressed
+    bool isSecondOperation; //For checking if any of the operation button has been pressed
 
     //Number functions
     void oneButtonPressed();

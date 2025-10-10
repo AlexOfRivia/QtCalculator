@@ -107,21 +107,27 @@ void kalkulator::substractButtonPressed()
 
 void kalkulator::divideButtonPressed()
 {
-    if (!isSecondOperation)
+    if (!calcString.isEmpty())
     {
-        this->calcString += " : ";
-        ui.resultPanel->setText(this->calcString);
-        this->isSecondOperation = true;
+        if (!isSecondOperation)
+        {
+            this->calcString += " : ";
+            ui.resultPanel->setText(this->calcString);
+            this->isSecondOperation = true;
+        }
     }
 }
 
 void kalkulator::multiplyButtonPressed()
 {
-    if (!isSecondOperation)
+    if (!calcString.isEmpty())
     {
-        this->calcString += " X ";
-        ui.resultPanel->setText(this->calcString);
-        this->isSecondOperation = true;
+        if (!isSecondOperation)
+        {
+            this->calcString += " X ";
+            ui.resultPanel->setText(this->calcString);
+            this->isSecondOperation = true;
+        }
     }
 }
 
@@ -129,17 +135,27 @@ void kalkulator::multiplyButtonPressed()
 
 void kalkulator::powerButtonPressed()
 {
-
+    if (!calcString.isEmpty())
+    {
+        if (!isSecondOperation)
+        {
+            this->calcString += "^";
+            ui.resultPanel->setText(this->calcString);
+            this->isSecondOperation = true;
+        }
+    }
 }
 
 void kalkulator::sqRootButtonPressed()
 {
-
+    //JUST THROEING OUT THE SQUARE ROOT OF A NUMBER
 }
 
 void kalkulator::clearButtonPressed()
 {
-
+    this->calcString.clear();
+    this->isSecondOperation = false;
+    ui.resultPanel->setText(this->calcString);
 }
 
 void kalkulator::decimalButtonPressed()
@@ -164,7 +180,7 @@ bool kalkulator::isOperator()
 //Clearing potential calculation errors (for example dividing by 0)
 void kalkulator::clearErrors()
 {
-
+    
 }
 
 //Constructor
@@ -172,6 +188,9 @@ kalkulator::kalkulator(QWidget *parent)
     : QMainWindow(parent)
 {
     ui.setupUi(this);
+    
+
+    this->isSecondOperation = false;
     setFixedSize(420,630); //Setting fixed size because uhhhhh... who needs a bigger calculator I guess?
 
 
@@ -220,15 +239,11 @@ kalkulator::kalkulator(QWidget *parent)
     );
 
     QObject::connect(
-        ui.addButton, &QPushButton::clicked, this, &kalkulator::addButtonPressed
-    );
-
-    QObject::connect(
         ui.substractButton, &QPushButton::clicked, this, &kalkulator::substractButtonPressed
     );
 
     QObject::connect(
-        ui.multiplyButton, &QPushButton::clicked, this, &kalkulator::addButtonPressed
+        ui.multiplyButton, &QPushButton::clicked, this, &kalkulator::multiplyButtonPressed
     );
 
     QObject::connect(
@@ -237,6 +252,10 @@ kalkulator::kalkulator(QWidget *parent)
 
     QObject::connect(
         ui.dotButton, &QPushButton::clicked, this, &kalkulator::decimalButtonPressed
+    );
+
+    QObject::connect(
+		ui.clearButton, &QPushButton::clicked, this, &kalkulator::clearButtonPressed
     );
 }
 
