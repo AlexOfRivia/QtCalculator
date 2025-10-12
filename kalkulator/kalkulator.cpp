@@ -168,12 +168,34 @@ void kalkulator::decimalButtonPressed()
 //Deleting last inputed number
 void kalkulator::backButtonPressed()
 {
+    if (!calcString.isEmpty())
+    {
 
+        if (isOperator(calcString.back()) || calcString.back() == " ") 
+        {
+            while (isOperator(calcString.back()) || calcString.back() == " ") 
+            {
+                calcString.removeLast();
+                this->isSecondOperation = false;
+				ui.resultPanel->setText(this->calcString);
+            }
+        } else {
+		    this->calcString.chop(1); 
+		    ui.resultPanel->setText(this->calcString);
+        }
+
+    }
 }
 
 //Checking wether the character is an operator
-bool kalkulator::isOperator()
+bool kalkulator::isOperator(QChar ch)
 {
+
+    if (ch == '+' || ch == '-' || ch == 'X' || ch == ':' || ch =='^')
+    {
+        return true;
+    }
+
     return false;
 }
 
@@ -256,6 +278,10 @@ kalkulator::kalkulator(QWidget *parent)
 
     QObject::connect(
 		ui.clearButton, &QPushButton::clicked, this, &kalkulator::clearButtonPressed
+    );
+
+    QObject::connect(
+        ui.backButton, &QPushButton::clicked, this, &kalkulator::backButtonPressed
     );
 }
 

@@ -63,7 +63,7 @@ private:
     void backButtonPressed();
 
     //Other functions I guess
-    bool isOperator(); //Checking if a character is an operator or not
+    bool isOperator(QChar ch); //Checking if a character is an operator or not
     void clearErrors();
 
 };
