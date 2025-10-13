@@ -76,7 +76,8 @@ li.checked::marker { content: &quot;\2612&quot;; }
         <property name="styleSheet">
          <string notr="true">QPushButton
 {
-	background: rgb(80,80,80)
+	background: rgb(80,80,80);
+	border-radius: 40px
 }
 </string>
         </property>
@@ -101,7 +102,8 @@ li.checked::marker { content: &quot;\2612&quot;; }
         <property name="styleSheet">
          <string notr="true">QPushButton
 {
-	background: rgb(212,212,210)
+	background: rgb(212,212,210);
+	border-radius: 40px
 }
 </string>
         </property>
@@ -126,7 +128,8 @@ li.checked::marker { content: &quot;\2612&quot;; }
         <property name="styleSheet">
          <string notr="true">QPushButton
 {
-	background: rgb(80,80,80)
+	background: rgb(80,80,80);
+	border-radius: 40px
 }
 </string>
         </property>
@@ -151,7 +154,8 @@ li.checked::marker { content: &quot;\2612&quot;; }
         <property name="styleSheet">
          <string notr="true">QPushButton
 {
-	background: rgb(212,212,210)
+	background: rgb(212,212,210);
+	border-radius: 40px
 }
 </string>
         </property>
@@ -176,7 +180,8 @@ li.checked::marker { content: &quot;\2612&quot;; }
         <property name="styleSheet">
          <string notr="true">QPushButton
 {
-	background: rgb(255,149,0)
+	background: rgb(255,149,0);
+	border-radius: 40px
 }</string>
         </property>
         <property name="text">
@@ -200,7 +205,8 @@ li.checked::marker { content: &quot;\2612&quot;; }
         <property name="styleSheet">
          <string notr="true">QPushButton
 {
-	background: rgb(80,80,80)
+	background: rgb(80,80,80);
+	border-radius: 40px
 }
 </string>
         </property>
@@ -225,7 +231,8 @@ li.checked::marker { content: &quot;\2612&quot;; }
         <property name="styleSheet">
          <string notr="true">QPushButton
 {
-	background: rgb(80,80,80)
+	background: rgb(80,80,80);
+	border-radius: 40px
 }
 </string>
         </property>
@@ -250,7 +257,8 @@ li.checked::marker { content: &quot;\2612&quot;; }
         <property name="styleSheet">
          <string notr="true">QPushButton
 {
-	background: rgb(80,80,80)
+	background: rgb(80,80,80);
+	border-radius: 40px
 }
 </string>
         </property>
@@ -275,7 +283,8 @@ li.checked::marker { content: &quot;\2612&quot;; }
         <property name="styleSheet">
          <string notr="true">QPushButton
 {
-	background: rgb(212,212,210)
+	background: rgb(212,212,210);
+	border-radius: 40px
 }
 </string>
         </property>
@@ -300,7 +309,8 @@ li.checked::marker { content: &quot;\2612&quot;; }
         <property name="styleSheet">
          <string notr="true">QPushButton
 {
-	background: rgb(255,149,0)
+	background: rgb(255,149,0);
+	border-radius: 40px
 }</string>
         </property>
         <property name="text">
@@ -324,7 +334,8 @@ li.checked::marker { content: &quot;\2612&quot;; }
         <property name="styleSheet">
          <string notr="true">QPushButton
 {
-	background: rgb(80,80,80)
+	background: rgb(80,80,80);
+	border-radius: 40px
 }
 </string>
         </property>
@@ -349,7 +360,8 @@ li.checked::marker { content: &quot;\2612&quot;; }
         <property name="styleSheet">
          <string notr="true">QPushButton
 {
-	background: rgb(80,80,80)
+	background: rgb(80,80,80);
+	border-radius: 40px
 }
 </string>
         </property>
@@ -374,7 +386,8 @@ li.checked::marker { content: &quot;\2612&quot;; }
         <property name="styleSheet">
          <string notr="true">QPushButton
 {
-	background: rgb(255,149,0)
+	background: rgb(255,149,0);
+	border-radius: 40px
 }</string>
         </property>
         <property name="text">
@@ -398,7 +411,8 @@ li.checked::marker { content: &quot;\2612&quot;; }
         <property name="styleSheet">
          <string notr="true">QPushButton
 {
-	background: rgb(80,80,80)
+	background: rgb(80,80,80);
+	border-radius: 40px
 }
 </string>
         </property>
@@ -423,7 +437,8 @@ li.checked::marker { content: &quot;\2612&quot;; }
         <property name="styleSheet">
          <string notr="true">QPushButton
 {
-	background: rgb(80,80,80)
+	background: rgb(80,80,80);
+	border-radius: 40px
 }
 </string>
         </property>
@@ -448,8 +463,10 @@ li.checked::marker { content: &quot;\2612&quot;; }
         <property name="styleSheet">
          <string notr="true">QPushButton
 {
-	background: rgb(255,149,0)
-}</string>
+	background: rgb(255,149,0);
+	border-radius: 40px
+}
+</string>
         </property>
         <property name="text">
          <string>x</string>
@@ -472,7 +489,8 @@ li.checked::marker { content: &quot;\2612&quot;; }
         <property name="styleSheet">
          <string notr="true">QPushButton
 {
-	background: rgb(80,80,80)
+	background: rgb(80,80,80);
+	border-radius: 40px
 }
 </string>
         </property>
@@ -497,7 +515,8 @@ li.checked::marker { content: &quot;\2612&quot;; }
         <property name="styleSheet">
          <string notr="true">QPushButton
 {
-	background: rgb(255,149,0)
+	background: rgb(255,149,0);
+	border-radius: 40px
 }</string>
         </property>
         <property name="text">
@@ -521,7 +540,8 @@ li.checked::marker { content: &quot;\2612&quot;; }
         <property name="styleSheet">
          <string notr="true">QPushButton
 {
-	background: rgb(80,80,80)
+	background: rgb(80,80,80);
+	border-radius: 40px
 }
 </string>
         </property>
@@ -546,7 +566,8 @@ li.checked::marker { content: &quot;\2612&quot;; }
         <property name="styleSheet">
          <string notr="true">QPushButton
 {
-	background: rgb(80,80,80)
+	background: rgb(80,80,80);
+	border-radius: 40px
 }
 </string>
         </property>

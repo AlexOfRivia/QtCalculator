@@ -12,11 +12,18 @@ numerical buttons: 505050
 Clear, Percent and change sign buttons: D4D4D2
 */
 
-/*The numbers should at first be used as strings and then converted into float numbers I think
+/*
 
+TODO:
+- Add a color upon button press and fix button positions to look sleeker
+- Change style of the result panel: change the color to the background & text color to white
+
+
+The numbers should at first be used as strings and then converted into double numbers I think
 you can press coma only once per number
 
-Also add a function that clears all errors uppon button press, bozo
+
+
 */
 
 
