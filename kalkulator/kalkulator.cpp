@@ -4,72 +4,73 @@
 
 void kalkulator::oneButtonPressed()
 {
+	kalkulator::clearErrors();
     this->calcString += "1";
     ui.resultPanel->setText(this->calcString);
-    //this->isSecondOperation = false;
 }
 
 void kalkulator::twoButtonPressed()
 {
+    kalkulator::clearErrors();
+
     this->calcString += "2";
     ui.resultPanel->setText(this->calcString);
-    //this->isSecondOperation = false;
 }
 
 void kalkulator::threeButtonPressed()
 {
+    kalkulator::clearErrors();
     this->calcString += "3";
     ui.resultPanel->setText(this->calcString);
-    //this->isSecondOperation = false;
 }
 
 void kalkulator::fourButtonPressed()
 {
+    kalkulator::clearErrors();
     this->calcString += "4";
     ui.resultPanel->setText(this->calcString);
-    //this->isSecondOperation = false;
 }
 
 void kalkulator::fiveButtonPressed()
 {
+    kalkulator::clearErrors();
     this->calcString += "5";
     ui.resultPanel->setText(this->calcString);
-    //this->isSecondOperation = false;
 }
 
 void kalkulator::sixButtonPressed()
 {
+    kalkulator::clearErrors();
     this->calcString += "6";
     ui.resultPanel->setText(this->calcString);
-    //this->isSecondOperation = false;
 }
 
 void kalkulator::sevenButtonPressed()
 {
+    kalkulator::clearErrors();
     this->calcString += "7";
     ui.resultPanel->setText(this->calcString);
-    //this->isSecondOperation = false;
 }
 
 void kalkulator::eightButtonPressed()
 {
+    kalkulator::clearErrors();
     this->calcString += "8";
     ui.resultPanel->setText(this->calcString);
-    //this->isSecondOperation = false;
 }
 
 void kalkulator::nineButtonPressed()
 {
+    kalkulator::clearErrors();
     this->calcString += "9";
     ui.resultPanel->setText(this->calcString);
-    //this->isSecondOperation = false;
 }
 
 void kalkulator::zeroButtonPressed()
 {
+    kalkulator::clearErrors();
     this->calcString += "0";
     ui.resultPanel->setText(this->calcString);
-    //this->isSecondOperation = false;
 }
 
 
@@ -148,7 +149,13 @@ void kalkulator::powerButtonPressed()
 
 void kalkulator::sqRootButtonPressed()
 {
-    //JUST THROEING OUT THE SQUARE ROOT OF A NUMBER
+    if (!calcString.isEmpty())
+    {
+        double a = this->calcString.toDouble();
+        a = sqrt(a);
+		this->calcString = QString::number(a);
+        ui.resultPanel->setText(this->calcString);
+    }
 }
 
 void kalkulator::clearButtonPressed()
@@ -202,7 +209,11 @@ bool kalkulator::isOperator(QChar ch)
 //Clearing potential calculation errors (for example dividing by 0)
 void kalkulator::clearErrors()
 {
-    
+    if (this->calcString == "0")
+    {
+        this->calcString.clear();
+		ui.resultPanel->setText(this->calcString);
+    }
 }
 
 //Constructor
@@ -215,6 +226,8 @@ kalkulator::kalkulator(QWidget *parent)
     this->isSecondOperation = false;
     setFixedSize(420,630); //Setting fixed size because uhhhhh... who needs a bigger calculator I guess?
 
+
+	// ! NUMBERS !
 
     QObject::connect(
         ui.oneButton, &QPushButton::clicked, this, &kalkulator::oneButtonPressed
@@ -256,6 +269,10 @@ kalkulator::kalkulator(QWidget *parent)
         ui.zeroButton, &QPushButton::clicked, this, &kalkulator::zeroButtonPressed
     );
 
+
+
+	// ! BASIC OPERATIONS !
+
     QObject::connect(
         ui.addButton, &QPushButton::clicked, this, &kalkulator::addButtonPressed
     );
@@ -272,17 +289,29 @@ kalkulator::kalkulator(QWidget *parent)
         ui.divideButton, &QPushButton::clicked, this, &kalkulator::divideButtonPressed
     );
 
-    QObject::connect(
-        ui.dotButton, &QPushButton::clicked, this, &kalkulator::decimalButtonPressed
-    );
 
+
+	// ! OTHER OPERATIONS !
+    
     QObject::connect(
 		ui.clearButton, &QPushButton::clicked, this, &kalkulator::clearButtonPressed
     );
 
     QObject::connect(
+        ui.dotButton, &QPushButton::clicked, this, &kalkulator::decimalButtonPressed
+    );
+
+    QObject::connect(
+        ui.squareRoot, &QPushButton::clicked, this, &kalkulator::sqRootButtonPressed
+    );
+
+
+	// ! OTHER FUNCTIONS !
+
+    QObject::connect(
         ui.backButton, &QPushButton::clicked, this, &kalkulator::backButtonPressed
     );
+
 }
 
 //Destructor
