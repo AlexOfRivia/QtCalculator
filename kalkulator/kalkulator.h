@@ -6,27 +6,13 @@
 #include <QRegularExpression>
 
 
-/*Colour pallete:
+/*
+Colour pallete:
 Background: 1C1C1C
 functional buttons: FF9500
 numerical buttons: 505050
 Clear, Percent and change sign buttons: D4D4D2
 */
-
-/*
-
-TODO:
-- Add a color upon button press and fix button positions to look sleeker
-- Change style of the result panel: change the color to the background & text color to white
-
-
-The numbers should at first be used as strings and then converted into double numbers I think
-you can press coma only once per number
-
-
-
-*/
-
 
 class kalkulator : public QMainWindow
 {
@@ -62,6 +48,7 @@ private:
     void substractButtonPressed();
     void divideButtonPressed();
     void multiplyButtonPressed();
+    void equalsButtonPressed();
 
     //Other operations
     void powerButtonPressed();

@@ -133,6 +133,57 @@ void kalkulator::multiplyButtonPressed()
     }
 }
 
+void kalkulator::equalsButtonPressed()
+{
+    char operation;
+    double a, b;
+    QStringList list;
+
+    list = this->calcString.split(" ");
+
+    a = list[0].toDouble();
+    b = list[2].toDouble();
+
+	operation = list[1].at(0).toLatin1();
+
+
+    if (!calcString.isEmpty())
+    {
+        switch (operation)
+        {
+            case '+':
+				this->calcString = QString::number(a + b);
+                this->isSecondOperation = false;
+				ui.resultPanel->setText(this->calcString);
+                break;
+            case '-':
+                this->calcString = QString::number(a - b);
+                this->isSecondOperation = false;
+                ui.resultPanel->setText(this->calcString);
+                break;
+            case 'X':
+                this->calcString = QString::number(a * b);
+                this->isSecondOperation = false;
+                ui.resultPanel->setText(this->calcString);
+                break;
+            case ':':
+                this->calcString = QString::number(a / b);
+                this->isSecondOperation = false;
+                ui.resultPanel->setText(this->calcString);
+                break;
+            case '^':
+                this->calcString = QString::number(pow(a,b));
+                this->isSecondOperation = false;
+                ui.resultPanel->setText(this->calcString);
+                break;
+            default:
+                return;
+        }
+    } else {
+        return;
+    }
+}
+
 // ! OTHER OPERATIONS !
 
 void kalkulator::powerButtonPressed()
@@ -141,7 +192,7 @@ void kalkulator::powerButtonPressed()
     {
         if (!isSecondOperation)
         {
-            this->calcString += "^";
+            this->calcString += " ^ ";
             ui.resultPanel->setText(this->calcString);
             this->isSecondOperation = true;
         }
@@ -230,6 +281,12 @@ void kalkulator::clearErrors()
         this->calcString.clear();
 		ui.resultPanel->setText(this->calcString);
     }
+
+    if (ui.resultPanel->toPlainText() == "inf")
+    {
+        this->calcString.clear();
+        ui.resultPanel->setText(this->calcString);
+    }
 }
 
 //Constructor
@@ -305,6 +362,10 @@ kalkulator::kalkulator(QWidget *parent)
 
     QObject::connect(
         ui.divideButton, &QPushButton::clicked, this, &kalkulator::divideButtonPressed
+    );
+
+    QObject::connect(
+        ui.equalsButton, &QPushButton::clicked, this, &kalkulator::equalsButtonPressed
     );
 
 
