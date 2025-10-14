@@ -1,5 +1,6 @@
 #include "kalkulator.h"
 
+
 // ! NUMBERS !
 
 void kalkulator::oneButtonPressed()
@@ -167,6 +168,21 @@ void kalkulator::clearButtonPressed()
 
 void kalkulator::decimalButtonPressed()
 {
+    QRegularExpression re("[+\\-*/^ ]");
+    int lastOperatorIndex = calcString.lastIndexOf(re);
+
+    QString currentNumber = calcString.mid(lastOperatorIndex + 1);
+
+    if (currentNumber.contains(".")) 
+    {
+        return;
+    }
+    if (currentNumber.isEmpty()) {
+        calcString += "0.";
+    } else {
+        calcString += ".";
+    }
+    ui.resultPanel->setText(calcString);
 
 }
 
@@ -307,6 +323,9 @@ kalkulator::kalkulator(QWidget *parent)
         ui.squareRoot, &QPushButton::clicked, this, &kalkulator::sqRootButtonPressed
     );
 
+    QObject::connect(
+        ui.powerButton, &QPushButton::clicked, this, &kalkulator::powerButtonPressed
+    );
 
 	// ! OTHER FUNCTIONS !
 

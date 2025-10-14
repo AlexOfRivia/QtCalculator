@@ -3,6 +3,7 @@
 #include <QtWidgets/QMainWindow>
 #include "ui_kalkulator.h"
 #include <vector>
+#include <QRegularExpression>
 
 
 /*Colour pallete:
