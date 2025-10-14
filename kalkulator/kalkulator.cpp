@@ -221,6 +221,8 @@ kalkulator::kalkulator(QWidget *parent)
     : QMainWindow(parent)
 {
     ui.setupUi(this);
+
+    ui.resultPanel->setTextColor(QColor::fromRgb(255, 255, 255));
     
 
     this->isSecondOperation = false;
