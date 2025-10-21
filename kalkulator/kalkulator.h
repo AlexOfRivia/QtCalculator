@@ -2,8 +2,8 @@
 
 #include <QtWidgets/QMainWindow>
 #include "ui_kalkulator.h"
-#include <vector>
 #include <QRegularExpression>
+#include <QMessageBox>
 
 
 /*
@@ -28,7 +28,6 @@ private:
     
     //Variables
     QString calcString;
-    std::vector<char> operators;
     bool isSecondOperation; //For checking if any of the operation button has been pressed
 
     //Number functions

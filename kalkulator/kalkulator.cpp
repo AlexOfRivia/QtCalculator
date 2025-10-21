@@ -135,50 +135,50 @@ void kalkulator::multiplyButtonPressed()
 
 void kalkulator::equalsButtonPressed()
 {
-    char operation;
-    double a, b;
-    QStringList list;
-
-    list = this->calcString.split(" ");
-
-    a = list[0].toDouble();
-    b = list[2].toDouble();
-
-	operation = list[1].at(0).toLatin1();
-
-
-    if (!calcString.isEmpty())
+    
+    if (!calcString.isEmpty() && isSecondOperation)
     {
-        switch (operation)
-        {
-            case '+':
-				this->calcString = QString::number(a + b);
-                this->isSecondOperation = false;
-				ui.resultPanel->setText(this->calcString);
-                break;
-            case '-':
-                this->calcString = QString::number(a - b);
-                this->isSecondOperation = false;
-                ui.resultPanel->setText(this->calcString);
-                break;
-            case 'X':
-                this->calcString = QString::number(a * b);
-                this->isSecondOperation = false;
-                ui.resultPanel->setText(this->calcString);
-                break;
-            case ':':
-                this->calcString = QString::number(a / b);
-                this->isSecondOperation = false;
-                ui.resultPanel->setText(this->calcString);
-                break;
-            case '^':
-                this->calcString = QString::number(pow(a,b));
-                this->isSecondOperation = false;
-                ui.resultPanel->setText(this->calcString);
-                break;
-            default:
-                return;
-        }
+            char operation;
+            double a, b;
+            QStringList list;
+
+            list = this->calcString.split(" ");
+
+            a = list[0].toDouble();
+            b = list[2].toDouble();
+
+            operation = list[1].at(0).toLatin1();
+
+            switch (operation)
+            {
+                case '+':
+                    this->calcString = QString::number(a + b);
+                    this->isSecondOperation = false;
+                    ui.resultPanel->setText(this->calcString);
+                    break;
+                case '-':
+                    this->calcString = QString::number(a - b);
+                    this->isSecondOperation = false;
+                    ui.resultPanel->setText(this->calcString);
+                    break;
+                case 'X':
+                    this->calcString = QString::number(a * b);
+                    this->isSecondOperation = false;
+                    ui.resultPanel->setText(this->calcString);
+                    break;
+                case ':':
+                    this->calcString = QString::number(a / b);
+                    this->isSecondOperation = false;
+                    ui.resultPanel->setText(this->calcString);
+                    break;
+                case '^':
+                    this->calcString = QString::number(pow(a, b));
+                    this->isSecondOperation = false;
+                    ui.resultPanel->setText(this->calcString);
+                    break;
+                default:
+                    return;
+            }
     } else {
         return;
     }
